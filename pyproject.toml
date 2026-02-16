@@ -1,0 +1,25 @@
+[project]
+name = "heic-to-jpeg"
+version = "0.1.0"
+description = "CLI application to convert HEIC images to JPEG"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "Pillow>=10.0.0",
+  "pillow-heif>=0.18.0"
+]
+
+[project.scripts]
+heic-to-jpeg = "heic_to_jpeg.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0.0"
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
