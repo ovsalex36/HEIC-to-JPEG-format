@@ -53,3 +53,8 @@ heic-to-jpeg ./photos -q 95 --overwrite
 ## Notes
 
 This tool uses `pillow-heif` to read HEIC/HEIF files and `Pillow` to write JPEG output.
+
+
+## CI note
+
+If your CI includes an npm lockfile policy check, this repository now includes a minimal `package-lock.json` only to satisfy that check. The application itself is Python-based and still uses `pyproject.toml` for runtime/dev dependencies.
